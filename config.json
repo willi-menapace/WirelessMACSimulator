@@ -1,0 +1,64 @@
+{
+	"simulation" : {
+		// seed(s) to initialize PRNGs
+		"seed" : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+		// duration of each simulation in seconds
+		"duration" : 30,
+		// communication range in meters
+		"range" : 10,
+		// physical layer datarate in bits per second
+		"datarate" : 8000000,
+		// packet queue size. set to 0 for infinity
+		"queue" : 2,
+		// contention widow size
+		"window_size": [2, 4, 8, 16, 32, 64, 128],
+		// channel listening time in seconds
+		"listening": 0.00001,
+		// packet inter-arrival distribution in 1/seconds
+		"interarrival" : [
+			{"distribution" : "exp", "lambda" : 10},
+			{"distribution" : "exp", "lambda" : 60},
+			{"distribution" : "exp", "lambda" : 110},
+			{"distribution" : "exp", "lambda" : 160},
+			{"distribution" : "exp", "lambda" : 210},
+			{"distribution" : "exp", "lambda" : 260},
+			{"distribution" : "exp", "lambda" : 310},
+			{"distribution" : "exp", "lambda" : 360},
+			{"distribution" : "exp", "lambda" : 410},
+			{"distribution" : "exp", "lambda" : 460},
+			{"distribution" : "exp", "lambda" : 510},
+			{"distribution" : "exp", "lambda" : 560},
+			{"distribution" : "exp", "lambda" : 610},
+			{"distribution" : "exp", "lambda" : 660},
+			{"distribution" : "exp", "lambda" : 710},
+			{"distribution" : "exp", "lambda" : 760},
+			{"distribution" : "exp", "lambda" : 810},
+			{"distribution" : "exp", "lambda" : 860},
+			{"distribution" : "exp", "lambda" : 910},
+			{"distribution" : "exp", "lambda" : 960},
+			{"distribution" : "exp", "lambda" : 1010},
+			{"distribution" : "exp", "lambda" : 1060},
+			{"distribution" : "exp", "lambda" : 1110},
+			{"distribution" : "exp", "lambda" : 1160},
+			{"distribution" : "exp", "lambda" : 1210},
+			{"distribution" : "exp", "lambda" : 1260},
+			{"distribution" : "exp", "lambda" : 1310},
+			{"distribution" : "exp", "lambda" : 1360},
+			{"distribution" : "exp", "lambda" : 1410},
+			{"distribution" : "exp", "lambda" : 1460},
+			{"distribution" : "exp", "lambda" : 1510}
+		],
+		// packet size distribution in bytes
+		"size" : {"distribution" : "unif", "min" : 32, "max" : 1500, "int" : 1},
+		// maximum packet size in bytes to compute the RX timeout
+		"maxsize" : 1500,
+		// processing time after end of reception or transmission before starting operations again
+		"processing" : {"distribution" : "const", "mean" : 0.000001},
+		// position of nodes, list of x,y pairs
+		"nodes" : [
+    		[[15.593,15.025], [16.677,10.178], [2.232,14.284], [0.536,14.601], [15.908,16.21], [1.108,7.085], [19.731,1.265], [2.98,4.607], [9.081,5.79], [15.665,13.768]]
+		],
+		// log file name using configuration parameters
+		"output" : "output_{interarrival.lambda}_{seed}_{window_size}.csv"
+	}
+}
