@@ -1,7 +1,7 @@
 # WirelessMACSimulator
 A Wifi-like MAC protocol simulator written in Python. Simulates and analyzes the performance of a given network topology under a set of protocol parameters. The project was written extending Michele Segata's Aloha protocol simulator as part of a course assignment.
 
-Read our [report](https://github.com/willi-menapace/WirelessMACSimulator/blob/master/report.pdf)!
+[Read our report](https://github.com/willi-menapace/WirelessMACSimulator/blob/master/report.pdf)!
 
 # Instructions
 
